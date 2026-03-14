@@ -1,0 +1,14 @@
+{
+    "expo": {
+        "name": "Tap Tap Duck",
+        "slug": "taptapduck",
+        "version": "1.0.0",
+        "orientation": "portrait",
+        "userInterfaceStyle": "light",
+        "newArchEnabled": true,
+        "ios": {
+            "supportsTablet": true
+        },
+        "platforms": ["ios", "android", "web"]
+    }
+}

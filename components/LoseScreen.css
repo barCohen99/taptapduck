@@ -1,0 +1,126 @@
+.lose-screen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.lose-modal {
+    background: linear-gradient(135deg, #2c1a1a 0%, #1a0a0a 100%);
+    border: 4px solid #ff4d4d;
+    border-radius: 20px;
+    padding: 30px;
+    width: 80%;
+    max-width: 350px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(255, 77, 77, 0.4);
+    animation: slideUp 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.lose-header h1 {
+    color: #ff4d4d;
+    font-size: 36px;
+    margin: 10px 0;
+    text-shadow: 2px 2px 0 #000;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.death-icon {
+    width: 80px;
+    height: 80px;
+    filter: drop-shadow(0 0 10px #ff4d4d);
+}
+
+.lose-stats {
+    margin: 20px 0;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    color: #ccc;
+    font-weight: 700;
+}
+
+.stat-row span:last-child {
+    color: #fff;
+    font-size: 18px;
+}
+
+.lose-message {
+    color: #aaa;
+    font-style: italic;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.btn-lobby {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 900;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 0 #a31d1d, 0 8px 15px rgba(0,0,0,0.4);
+    transition: all 0.2s;
+    width: 100%;
+}
+
+.btn-lobby:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #a31d1d;
+}
+
+.btn-lobby:hover {
+    background: #ff6666;
+    filter: brightness(1.1);
+}
+
+.btn-revive {
+    background: #fcd86d;
+    color: #332211;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 900;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 0 #d19f3a, 0 8px 15px rgba(0,0,0,0.4);
+    transition: all 0.2s;
+    width: 100%;
+}
+
+.btn-revive:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #d19f3a;
+}
+
+.btn-revive:hover {
+    filter: brightness(1.1);
+}
